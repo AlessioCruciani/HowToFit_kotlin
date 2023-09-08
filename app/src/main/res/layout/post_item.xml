@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?><!-- item_post.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/post_item_linear"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardBoxPostContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp">
+
+            <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/cardViewProfileImagePost"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:cardCornerRadius="50dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imagePostUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/userbasic" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textViewAuthor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/cardViewProfileImagePost"
+                app:layout_constraintStart_toEndOf="@+id/cardViewProfileImagePost"
+                app:layout_constraintTop_toTopOf="@id/cardViewProfileImagePost"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <TextView
+                android:id="@+id/textViewText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardViewProfileImagePost" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupChoices"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:layout_editor_absoluteX="204dp"
+                tools:layout_editor_absoluteY="65dp"
+                app:layout_constraintTop_toBottomOf="@id/textViewText"
+                app:layout_constraintBottom_toTopOf="@id/button"
+                android:orientation="vertical"
+                android:visibility="visible">
+            </RadioGroup>
+            <LinearLayout
+                android:id="@+id/horizontalLayout"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/textViewText"
+                app:layout_constraintBottom_toBottomOf="parent">
+                <TextView
+                    android:id="@+id/percentualTot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="20sp"
+                    android:layout_gravity="center_horizontal"/>
+
+                <!-- Prima barra -->
+                <LinearLayout
+                    android:id="@+id/bar1Layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp">
+
+                    <View
+                        android:id="@+id/barOption1"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.5"
+                        android:background="@color/teal_200" />
+                    <TextView
+                        android:id="@+id/percentual1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0" />
+
+                </LinearLayout>
+
+                <!-- Seconda barra -->
+                <LinearLayout
+                    android:id="@+id/bar2Layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:id="@+id/barOption2"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.5"
+                        android:background="@color/IlluminatigYellow" />
+                    <TextView
+                        android:id="@+id/percentual2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="VOTA"
+                android:textSize="10sp"
+                app:layout_constraintTop_toBottomOf="@id/radioGroupChoices"
+                tools:layout_editor_absoluteX="10dp" />
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mostra i risultati"
+                android:textSize="10sp"
+                app:layout_constraintTop_toBottomOf="@id/radioGroupChoices"
+                tools:layout_editor_absoluteX="10dp"
+                android:visibility="gone"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

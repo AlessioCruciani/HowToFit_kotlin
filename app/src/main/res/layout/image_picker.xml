@@ -1,0 +1,71 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/border_black"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        app:cardUseCompatPadding="true">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/border_black"
+            android:padding="1dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/closeButtonImagePicker"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:padding="8dp"
+                android:src="@drawable/baseline_close_24" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/closeButtonImagePicker">
+
+                <LinearLayout
+                    android:id="@+id/container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="end">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardViewImmagineCommento"
+                        android:layout_width="250dp"
+                        android:layout_height="250dp"
+                        app:cardCornerRadius="20dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/imageViewImmagineCommento"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+            </ScrollView>
+
+            <!-- Altre visualizzazioni o contenuto del popup -->
+        </RelativeLayout>
+
+        <!-- Aggiungi altre visualizzazioni o contenuto del popup come necessario -->
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

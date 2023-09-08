@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">HowToFit</string>
+    <string name="insert_the_mail_here">Inserisci la mail qui</string>
+    <string name="insert_the_password_here">Inserisci la password qui</string>
+    <string name="e_mail">E-Mail</string>
+    <string name="password">Password</string>
+    <string name="log_in">Login</string>
+    <string name="hai_dimenticato_la_password_click_here">Hai dimenticato la password? Clicca qui</string>
+    <string name="or">Oppure:</string>
+    <string name="submit">Accedi</string>
+    <string name="registrati">Registrati</string>
+    <string name="ripeti_password">Ripeti Password</string>
+    <string name="ripeti_la_password_qui">Ripeti la password qui</string>
+    <string name="username">Username</string>
+    <string name="scrivi_qui_il_tuo_username">Scrivi qui il tuo username</string>
+    <string name="inserisci_qui_nome_e_cognome">Inserisci qui nome e cognome</string>
+    <string name="nome_e_cognome">Nome e Cognome</string>
+    <string name="action_settings">Settings</string>
+    <string name="todo">TODO</string>
+    <string name="torna_al_login">Clicca qui per tornare al Login</string>
+    <string name="crea_un_account">Crea un account</string>
+    <string name="recupero_password">Recupero Password</string>
+    <string name="cambia_password">Cambia Password</string>
+    <string name="torna_al_login_frase">Torna al Login</string>
+    <string name="sign_in_with_google">Sign in with google</string>
+    <string name="inserisci_qui_il_tuo_nome">Inserisci qui il tuo nome</string>
+    <string name="inserisci_qui_il_tuo_cognome">Inserisci qui il tuo cognome</string>
+    <string name="invia_la_mail">Invia la Mail</string>
+    <string name="your_web_client_id">794118782712-8bls3e29ebm68dejeni4puue4lmk1lcl.apps.googleusercontent.com</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
+    <string name="large_text">.</string>
+    <string name="addImage">Aggiungi</string>
+    <string name="consiglio">Consiglio</string>
+    <string name="sondaggio">Sondaggio</string>
+    />
+</resources>

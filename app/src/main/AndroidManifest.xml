@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.HowToFit"
+        android:screenOrientation="portrait"
+        tools:targetApi="31">
+
+        <activity
+            android:name=".post.CreaPostActivity"
+            android:exported="true"
+            android:theme="@style/Theme.HowToFit.NoActionBar"/>
+        <activity
+            android:name=".post.PostActivity"
+            android:exported="true"
+            android:theme="@style/Theme.HowToFit.NoActionBar"/>
+        <activity
+            android:name=".start.RecuperaPassword"
+            android:exported="false"
+            android:theme="@style/Theme.HowToFit.NoActionBar"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".start.LoginActivity"
+            android:exported="true"
+            android:theme="@style/Theme.HowToFit.NoActionBar"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".start.RegisterActivity"
+            android:exported="true"
+            android:label="RegisterActivity"
+            android:theme="@style/Theme.HowToFit.NoActionBar"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".start.MainActivity"
+            android:exported="true"
+            android:label="MainActivity"
+            android:theme="@style/Theme.HowToFit.NoActionBar"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".home.HomeActivity"
+            android:exported="true"
+            android:label="HomeActivity"
+            />
+        <activity android:name=".modificaProfilo.AccountActivity"
+            android:exported="true"
+            android:theme="@style/Theme.HowToFit.NoActionBar"
+            android:label="AccountActivity"
+            />
+        <activity android:name=".modificaProfilo.ModificationImagineProfile"
+            android:exported="true"
+            android:theme="@style/Theme.HowToFit.NoActionBar"
+            android:label="ModificationImagineProfile"
+            />
+        <activity android:name=".guardarobaPersonale.GuardarobaPersonaleActivity"
+            android:exported="true"
+            android:theme="@style/Theme.HowToFit.NoActionBar"
+            android:label="GuardarobaPersonale"
+            />
+        <activity android:name=".home.ProfiloActivity"
+            android:exported="true"
+            android:theme="@style/Theme.HowToFit.NoActionBar"
+            android:label="ProfiloActivity"
+
+            />
+
+        <activity android:name=".home.UserListActivity"
+            android:exported="true"
+            android:label="UserListActivity"
+            />
+        <activity
+            android:name=".post.inserisciCommento"
+            android:exported="true"
+            android:theme="@style/Theme.HowToFit.NoActionBar"
+            />
+        <activity
+            android:name=".post.ConsigliActivity"
+            android:exported="true"
+            android:theme="@style/Theme.HowToFit.NoActionBar" />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,26 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.HowToFit" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/GrigioScuroOpaco</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.HowToFit.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Rounded_corners" parent="">
+        <item name="cornerFamily"> rounded</item>
+        <item name="cornerSize"> 10dp </item>
+        <item name="color">@color/white</item>
+    </style>
+
+    <style name="Theme.HowToFit.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.HowToFit.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>

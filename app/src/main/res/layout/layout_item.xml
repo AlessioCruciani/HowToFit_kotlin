@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp">
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/profile_image"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/Rounded_corners"
+        android:background="@drawable/userbasic"/>
+   <TextView
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       android:id="@+id/utente1"
+       android:textColor="@color/black"
+       android:text="Utente 1"
+       android:textSize="16dp"
+       android:textStyle="bold"
+       android:layout_marginStart="16dp"
+       android:layout_marginEnd="32dp"
+       android:layout_marginTop="8dp"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toEndOf="@id/profile_image"
+       app:layout_constraintTop_toTopOf="parent"
+       />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/sottotesto"
+        android:textColor="@color/GrigioScuro"
+        android:text="nome e cognome"
+        android:textSize="12dp"
+        android:textStyle="normal"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/profile_image"
+        app:layout_constraintTop_toBottomOf="@id/utente1"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sottotesto"
+        android:background="@color/GrigioChiaro"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".modificaProfilo.AccountActivity"
+    tools:showIn="@layout/layout_accountmod"
+    android:background="@color/GrigioScuro"
+    >
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        >
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+            app:title="HowToFit_Account"
+            android:background="@drawable/sfondoapplicazione">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="ACCOUNT"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textStyle="bold" />
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_margin="5dp"
+                android:layout_marginTop="245dp"
+                android:elevation="10dp"
+                android:visibility="visible"
+                app:cardCornerRadius="150dp"
+                app:layout_anchorGravity="center_vertical"
+                android:layout_gravity="center">
+                <ImageView
+                    android:id="@+id/imageProfilo"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    app:layout_anchor="@+id/app_bar"
+                    app:layout_anchorGravity="center_vertical"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/user_base_image" />
+            </androidx.cardview.widget.CardView>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        android:fillViewport="true"
+        android:background="@drawable/account_modifica">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/surname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Cognome"
+                app:layout_constraintEnd_toEndOf="@+id/editTextName"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="@+id/editTextName"
+                app:layout_constraintTop_toBottomOf="@+id/editTextName" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:text="Nome"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Email"
+                app:layout_constraintEnd_toEndOf="@+id/editTextSurname"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="@+id/editTextSurname"
+                app:layout_constraintTop_toBottomOf="@+id/editTextSurname" />
+
+            <TextView
+                android:id="@+id/telefono"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Telefono"
+                app:layout_constraintEnd_toEndOf="@+id/editTextTEmail"
+                app:layout_constraintStart_toStartOf="@+id/editTextTEmail"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTEmail" />
+
+            <TextView
+                android:id="@+id/biografia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Biografia"
+                app:layout_constraintEnd_toEndOf="@+id/editTextPhone"
+                app:layout_constraintStart_toStartOf="@+id/editTextPhone"
+                app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
+
+            <TextView
+                android:id="@+id/editTextTEmail"
+                android:background="@drawable/stili"
+                android:layout_width="354dp"
+                android:textColor="@color/white"
+                android:layout_height="48dp"
+                android:textAlignment="gravity"
+                android:gravity="center"
+                android:layout_marginTop="19dp"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                app:layout_constraintEnd_toEndOf="@+id/email"
+                app:layout_constraintStart_toStartOf="@+id/email"
+                app:layout_constraintTop_toBottomOf="@+id/email" />
+
+            <EditText
+                android:id="@+id/editTextName"
+                android:layout_width="354dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:layout_height="48dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/stili"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="@+id/name"
+                app:layout_constraintStart_toStartOf="@+id/name"
+                app:layout_constraintTop_toBottomOf="@+id/name" />
+
+            <EditText
+                android:id="@+id/editTextSurname"
+                android:layout_width="354dp"
+                android:layout_height="48dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/stili"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="@+id/surname"
+                app:layout_constraintStart_toStartOf="@+id/surname"
+                app:layout_constraintTop_toBottomOf="@+id/surname" />
+
+            <EditText
+                android:id="@+id/editTextPhone"
+                android:layout_width="354dp"
+                android:textColor="@color/white"
+                android:layout_height="48dp"
+                android:textAlignment="center"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/stili"
+                android:ems="10"
+                android:inputType="phone"
+                android:hint="Nessun Telefono Inserito"
+                app:layout_constraintEnd_toEndOf="@+id/telefono"
+                app:layout_constraintHorizontal_bias="0.501"
+                app:layout_constraintStart_toStartOf="@+id/telefono"
+                app:layout_constraintTop_toBottomOf="@+id/telefono" />
+
+            <EditText
+                android:id="@+id/editTextBio"
+                android:background="@drawable/stili"
+                android:layout_width="354dp"
+                android:textColor="@color/white"
+                android:paddingTop="24dp"
+                android:paddingBottom="24dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginTop="21dp"
+                android:ems="10"
+                android:inputType="textMultiLine"
+                android:hint="Nessuna Biografia Inserita"
+                app:layout_constraintEnd_toEndOf="@+id/biografia"
+                app:layout_constraintStart_toStartOf="@+id/biografia"
+                app:layout_constraintTop_toBottomOf="@+id/biografia" />
+
+            <Button
+                android:id="@+id/buttonModificaDati"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="84dp"
+                android:text="Modifica i Dati"
+                app:layout_constraintEnd_toEndOf="@+id/editTextBio"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/editTextBio"
+                app:layout_constraintTop_toBottomOf="@+id/editTextBio" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

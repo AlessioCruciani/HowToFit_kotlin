@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".post.inserisciCommento">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/titoloCommento"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:fontFamily="@font/expletussans_bold"
+                    android:text="Crea il tuo commento qui"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:gravity="center"
+                    app:layout_constraintVertical_bias="0.5"
+                    android:textSize="20sp" />
+                <ImageButton
+                    android:id="@+id/buttonGoBack"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:backgroundTint="@color/white"
+                    android:src="@drawable/baseline_keyboard_backspace_24"
+                    android:contentDescription="TODO" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/expletussansregular"
+                android:text="Testo del commento"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/testoDelCommento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/expletussansregular"
+                android:text="Cappelli (max 1)"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewButtonAddCappelli"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:cardBackgroundColor="@color/IlluminatigYellow"
+                    app:cardCornerRadius="20dp">
+
+                    <ImageButton
+                        android:id="@+id/buttonAddCappelli"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/baseline_add_24"
+                        android:gravity="center" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewImageCappello"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="@color/GrigioChiaroTrasparenza"
+                    app:cardCornerRadius="20dp">
+
+                    <ImageView
+                        android:id="@+id/imageViewCappello"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp" />
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/expletussansregular"
+                android:text="Magliette (max 1)"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewButtonAddMagliette"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:cardBackgroundColor="@color/IlluminatigYellow"
+                    app:cardCornerRadius="20dp">
+
+                    <ImageButton
+                        android:id="@+id/buttonAddMagliette"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/baseline_add_24"
+                        android:gravity="center" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewImageMaglietta"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="@color/GrigioChiaroTrasparenza"
+                    app:cardCornerRadius="20dp">
+
+                    <ImageView
+                        android:id="@+id/imageViewMaglietta"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp" />
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/expletussansregular"
+                android:text="Giacche (max 1)"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewButtonAddGiacche"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:cardBackgroundColor="@color/IlluminatigYellow"
+                    app:cardCornerRadius="20dp">
+
+                    <ImageButton
+                        android:id="@+id/buttonAddGiacche"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/baseline_add_24"
+                        android:gravity="center" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewImageGiacca"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="@color/GrigioChiaroTrasparenza"
+                    app:cardCornerRadius="20dp">
+
+                    <ImageView
+                        android:id="@+id/imageViewGiacca"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp" />
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/expletussansregular"
+                android:text="Pantaloni (max 1)"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewButtonAddPantaloni"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:cardBackgroundColor="@color/IlluminatigYellow"
+                    app:cardCornerRadius="20dp">
+
+                    <ImageButton
+                        android:id="@+id/buttonAddPantaloni"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/baseline_add_24"
+                        android:gravity="center" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewImagePantalone"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="@color/GrigioChiaroTrasparenza"
+                    app:cardCornerRadius="20dp">
+
+                    <ImageView
+                        android:id="@+id/imageViewPantalone"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp" />
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/expletussansregular"
+                android:text="Scarpe (max 1)"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewButtonAddScarpe"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:cardBackgroundColor="@color/IlluminatigYellow"
+                    app:cardCornerRadius="20dp">
+
+                    <ImageButton
+                        android:id="@+id/buttonAddScarpe"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/baseline_add_24"
+                        android:gravity="center" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewImageScarpe"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="@color/GrigioChiaroTrasparenza"
+                    app:cardCornerRadius="20dp">
+
+                    <ImageView
+                        android:id="@+id/imageViewScarpe"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp" />
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/expletussansregular"
+                android:text="Accessori (max 10)"
+                android:textSize="15sp" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/accessoriContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewButtonAddAccessori"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:cardBackgroundColor="@color/IlluminatigYellow"
+                    app:cardCornerRadius="20dp">
+
+                    <ImageButton
+                        android:id="@+id/buttonAddAccessori"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/baseline_add_24"
+                        android:gravity="center" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewImageAccessorio"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="@color/GrigioChiaroTrasparenza"
+                    app:cardCornerRadius="20dp">
+
+                    <ImageView
+                        android:id="@+id/imageViewAccessorio"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp" />
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+            </HorizontalScrollView>
+            <Button
+                android:layout_margin="20dp"
+                android:id="@+id/buttonInserisciCommento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Crea commento"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

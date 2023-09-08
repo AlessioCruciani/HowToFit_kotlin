@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/post_item_linear"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardBoxPostContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="15dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="true">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="15dp">
+
+            <TextView
+                android:id="@+id/textViewCreaPost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Crea un nuovo Post"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textSize="20sp"
+                android:fontFamily="@font/expletussans_bold"/>
+
+            <TextView
+                android:layout_marginTop="15dp"
+                android:id="@id/textViewDescrizione"
+                app:layout_constraintTop_toBottomOf="@id/textViewCreaPost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Descrizione"
+                android:fontFamily="@font/expletussansregular"
+                android:textSize="15dp"
+                android:textColor="@color/black"/>
+            <EditText
+                android:id="@+id/editTextDescrizionePost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDescrizione"
+                app:layout_constraintStart_toStartOf="parent"
+                android:hint="Inserisci qui la descrizione"
+                android:textSize="13sp"
+                />
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/radioGroupNuovoPost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/editTextDescrizionePost"
+                android:checkedButton="@id/radioButtonSondaggio">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:id="@+id/radioButtonSondaggio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sondaggio"
+                        android:layout_marginEnd="20dp"
+                        />
+                    <RadioButton
+                        android:id="@+id/radioButtonConsiglio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/consiglio"
+                        android:layout_marginStart="20dp"
+                        />
+                </LinearLayout>
+            </RadioGroup>
+            <LinearLayout
+                android:id="@+id/linearSondaggio"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroupNuovoPost"
+                app:layout_constraintStart_toStartOf="parent"
+                android:gravity="center"
+                android:visibility="visible"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewFoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" />
+
+                <Button
+                    android:id="@+id/buttonAggiungiFoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Aggiungi foto"
+                    android:onClick="aggiungiFoto" />
+
+                <Button
+                    android:id="@+id/buttonCreaSondaggio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="creaSondaggio"
+                    android:text="Crea sondaggio" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linearConsiglio"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroupNuovoPost"
+                app:layout_constraintStart_toStartOf="parent"
+                android:gravity="center"
+                android:visibility="gone"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Data Evento"
+                    android:fontFamily="@font/expletussansregular"
+                    android:textSize="14dp"
+                    android:textColor="@color/black"/>
+                <EditText
+                    android:id="@+id/editTextDataEvento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:hint="Inserisci qui la data dell'evento"
+                    android:onClick="showDatePickerDialog"
+                    android:textSize="12sp"
+                    android:focusable="false"
+                    android:cursorVisible="false"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tema Evento"
+                    android:fontFamily="@font/expletussansregular"
+                    android:textSize="14dp"
+                    android:textColor="@color/black"/>
+                <EditText
+                    android:id="@+id/editTextTemaEvento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:hint="Inserisci qui il tema dell'evento"
+                    android:textSize="12sp"
+                    />
+
+                <Button
+                    android:id="@+id/buttonCreaConsglio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="creaConsiglio"
+                    android:text="Crea consiglio" />
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/textViewDescrizione"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.868"
+                app:layout_constraintStart_toEndOf="@id/textViewCreaPost"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@android:drawable/ic_menu_close_clear_cancel"
+                android:background="@color/white"
+                app:tint="@color/Rosso" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

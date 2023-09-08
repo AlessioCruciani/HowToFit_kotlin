@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.HomeActivity"
+    android:id="@+id/drawerLayout"
+    android:background="@color/white">
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          tools:context=".MainActivity">
+
+         <RelativeLayout
+             android:id="@+id/footer"
+             android:clickable="false"
+             android:layout_width="match_parent"
+             android:layout_height="40dp"
+             android:layout_alignParentBottom="true"
+             android:background="@color/white"
+             app:layout_constraintBottom_toBottomOf="parent"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintHorizontal_bias="0.0"
+             app:layout_constraintStart_toStartOf="parent">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="0dp"
+                android:background="@color/GrigioScuroOpaco"/>
+            <ImageView
+                android:id="@+id/home"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="0dp"
+                android:clickable="true"
+                android:padding="2dp"
+                app:srcCompat="@drawable/home_1" />
+            <ImageView
+                android:id="@+id/wardrobe"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="182dp"
+                android:layout_marginTop="0dp"
+                app:srcCompat="@drawable/person_fill1_wght400_grad0_opsz48"
+                android:clickable="true"/>
+            <ImageView
+                android:id="@+id/search"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="330dp"
+                android:layout_marginTop="0dp"
+                app:srcCompat="@drawable/search"
+                android:clickable="true"/>
+
+
+         </RelativeLayout>
+
+         <FrameLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_above="@id/footer"
+             android:gravity="center"
+             app:layout_constraintBottom_toTopOf="@+id/footer"
+             app:layout_constraintTop_toBottomOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintEnd_toEndOf="parent"
+             android:id="@+id/homeScroll">
+
+            <ImageButton
+                android:id="@+id/consigliButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_gravity="end"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                app:srcCompat="@drawable/speaker_notes_fill0_wght400_grad0_opsz48"
+                android:visibility="visible"/>
+
+            <ImageButton
+                android:id="@+id/sondaggioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="5dp"
+                app:srcCompat="@drawable/quiz_fill0_wght400_grad0_opsz48"
+                android:visibility="gone"/>
+         </FrameLayout>
+
+         <RelativeLayout
+             android:id="@+id/relativeLayout"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent" />
+
+
+      </RelativeLayout>
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+   <!--la navigation View è il menù standard da usare ora a questo leghiamo l'header-->
+   <com.google.android.material.navigation.NavigationView
+       android:id="@+id/nav_view"
+       android:layout_width="wrap_content"
+       android:layout_height="match_parent"
+       app:headerLayout="@layout/nav_header"
+       app:menu="@menu/nav_menu"
+       android:layout_gravity="start"
+       android:fitsSystemWindows="true"
+       android:background="@color/white"
+       app:itemTextColor="@color/black"/>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
